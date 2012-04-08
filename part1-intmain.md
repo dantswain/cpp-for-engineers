@@ -1,6 +1,12 @@
 # Part 1:  `int main`
 
-The entry point for C and C++ programs is a function called `main`.  The hello world program in C++ looks like this:
+The entry point for C and C++ programs is a function called `main`.  It turns out that we can start thinking about some useful ideas just by looking at some ways that we can use this structure.
+
+FYI, if you're interested in a really deep look at what really happens here, take a look at the KSplice ["Hello from a libc-free world!"](https://blogs.oracle.com/ksplice/entry/hello_from_a_libc_free) blog post.  It's pretty neat, but pretty involved.
+
+## Hello, World!
+
+The hello world program in C++ looks like this:
 
 ```c++
 #include <iostream>
@@ -24,4 +30,33 @@ A few things to note here.  First, `main` takes two arguments: `int argc` will b
 cout << "Hello, world." << endl;
 ```
 
-I'm not going to do that.  Why?  Because I want you to get in the habit of writing code that's readable at the expense of using more keystrokes.  You can learn more about [namespaces](http://www.cplusplus.com/doc/tutorial/namespaces/) at [cplusplus.com](http://cplusplus.com) if you want, but the take home message for right now is that using `std::cout` and `std::endl` makes it really clear that those functions, objects, or whatever they are, come from the same code module.
+I'm not going to do that.  Why?  Because one of my main points is going to be that **it's always worth a few extra keystrokes (and sometimes even a few extra CPU cycles) to write code that's more readable**.  You can learn more about [namespaces](http://www.cplusplus.com/doc/tutorial/namespaces/) at [cplusplus.com](http://cplusplus.com) if you want, but the take home message for right now is that using `std::cout` and `std::endl` makes it really clear that those functions, objects, or whatever they are, come from the same code module.
+
+## Reusable Code
+
+When you start writing a lot of programs that have a similar flavor, you start getting tired of repeating the same lines of code over and over again.  This idea is at the heart of good coding practice.  It's not just laziness, either.  It *does* make development faster when you can reuse code, but another huge benefit is maintainability.  Suppose you write 10 programs that use the same shared piece of code; then, when you improve that shared code, you're improving 10 programs all at once.
+
+One of the maybe-not-so-obvious downsides of reusing code is that it necessarily makes the structure of the program more complicated.
+
+Let's modify our "Hello, world" program in a pretty simple way by adding a function ([helloworld_function.cpp](helloworld_function.cpp) ).
+
+```c++
+#include <iostream>
+
+void saySomething(std::string message)
+{
+    std::cout << message << std::endl;
+}
+
+int main(int argc, char** argv)
+{
+    saySomething("Hello, world");
+
+    return 0;
+}
+```
+
+It may not seem like much right now, but we *did* make this program a little harder to understand by shifting the 'work' to a function.  It's also pretty obvious that we've made this program a good deal more flexible, because we could change it to say just about anything we want by changing the text in `saySomething("Hello, world")`.  You can imagine that this could get much more complicated AND much more powerful pretty quickly.  This is a trade-off that we're going to have to deal with.
+
+## Appplication Templates - Where did `int main` go?
+
