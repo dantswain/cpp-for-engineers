@@ -87,4 +87,4 @@ We've used a [preprocessor macro](http://www.cplusplus.com/doc/tutorial/preproce
 
 The bottom line is that code reuse is A Good Thing and a principle motivator of code modularity, but that modularity necessarily makes code harder to understand from a top-down point of view.  We need to shift our thinking to a bottom-up approach; understand the building blocks of a program and you can often start to see how they fit together.  Better yet, you need not fully understand *all* of the building blocks in order to be able to make meaningful changes to *one* of them.
 
-[back to main](/)
+[back to main](/cpp-for-engineers)
