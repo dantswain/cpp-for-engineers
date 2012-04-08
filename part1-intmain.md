@@ -38,7 +38,7 @@ When you start writing a lot of programs that have a similar flavor, you start g
 
 One of the maybe-not-so-obvious downsides of reusing code is that it necessarily makes the structure of the program more complicated.
 
-Let's modify our "Hello, world" program in a pretty simple way by adding a function ([helloworld_function.cpp](helloworld_function.cpp) ).
+Let's modify our "Hello, world" program in a pretty simple way by adding a function ([`helloworld_function.cpp`](helloworld_function.cpp)).
 
 ```c++
 #include <iostream>
@@ -59,4 +59,27 @@ int main(int argc, char** argv)
 It may not seem like much right now, but we *did* make this program a little harder to understand by shifting the 'work' to a function.  It's also pretty obvious that we've made this program a good deal more flexible, because we could change it to say just about anything we want by changing the text in `saySomething("Hello, world")`.  You can imagine that this could get much more complicated AND much more powerful pretty quickly.  This is a trade-off that we're going to have to deal with.
 
 ## Appplication Templates - Where did `int main` go?
+
+This is one of the first hurdles that casual coders come across when starting to look at more complex projects.  It's a natural (and good!) instinct to try to understand a program from the top down by looking for `int main` and following the progression from there.  Unfortunately, this just doesn't work well on large projects. 
+
+Here's a simple example of where `int main` can disappear pretty quickly.  Suppose we had to write a hundred programs, and all they did was output some text to the screen.  Every program would look like [`helloworld_function.cpp`](helloworld_function.cpp), but with different text as an argument to the `saySomething` function.  Cutting to the chase, we could end up with something like [`say_prog.h`](say_prog.h):
+
+```c++
+#include <iostream>
+
+void saySomething(std::string message)
+{
+    std::cout << message << std::endl;
+}
+
+#define SAY_PROG(x) int main(int argc, char**argv){saySomething(x); return 0;}
+```
+
+And a program like [`sayHello.cpp`](sayHello.cpp) that consists of two lines:
+
+```c++
+#include "say_prog.h"
+
+SAY_PROG("Hello, world");
+```
 
