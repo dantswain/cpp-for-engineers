@@ -19,7 +19,7 @@ int main(int argc, char** argv)
 }
 ```
 
-You can find the [`helloworld.cpp`](helloworld.cpp) file in this directory.  Compile and run it from the command line like this:
+You can find the [`helloworld.cpp`](part1/helloworld.cpp) file in this directory.  Compile and run it from the command line like this:
 
     g++ helloworld.cpp -o helloworld
     ./helloworld
@@ -38,7 +38,7 @@ When you start writing a lot of programs that have a similar flavor, you start g
 
 One of the maybe-not-so-obvious downsides of reusing code is that it necessarily makes the structure of the program more complicated.
 
-Let's modify our "Hello, world" program in a pretty simple way by adding a function ([`helloworld_function.cpp`](helloworld_function.cpp)).
+Let's modify our "Hello, world" program in a pretty simple way by adding a function ([`helloworld_function.cpp`](part1/helloworld_function.cpp)).
 
 ```c++
 #include <iostream>
@@ -62,7 +62,7 @@ It may not seem like much right now, but we *did* make this program a little har
 
 This is one of the first hurdles that casual coders come across when starting to look at more complex projects.  It's a natural (and good!) instinct to try to understand a program from the top down by looking for `int main` and following the progression from there.  Unfortunately, this just doesn't work well on large projects. 
 
-Here's a simple example of where `int main` can disappear pretty quickly.  Suppose we had to write a hundred programs, and all they did was output some text to the screen.  Every program would look like [`helloworld_function.cpp`](helloworld_function.cpp), but with different text as an argument to the `saySomething` function.  Cutting to the chase, we could end up with something like [`say_prog.h`](say_prog.h):
+Here's a simple example of where `int main` can disappear pretty quickly.  Suppose we had to write a hundred programs, and all they did was output some text to the screen.  Every program would look like [`helloworld_function.cpp`](part1/helloworld_function.cpp), but with different text as an argument to the `saySomething` function.  Cutting to the chase, we could end up with something like [`say_prog.h`](part1/say_prog.h):
 
 ```c++
 #include <iostream>
@@ -75,7 +75,7 @@ void saySomething(std::string message)
 #define SAY_PROG(x) int main(int argc, char**argv){saySomething(x); return 0;}
 ```
 
-And a program like [`sayHello.cpp`](sayHello.cpp) that consists of two lines:
+And a program like [`sayHello.cpp`](part1/sayHello.cpp) that consists of two lines:
 
 ```c++
 #include "say_prog.h"
@@ -86,3 +86,5 @@ SAY_PROG("Hello, world");
 We've used a [preprocessor macro](http://www.cplusplus.com/doc/tutorial/preprocessor/) to create an application template, `SAY_PROG` that does all of the common stuff for us.  Again, we've gained a lot of flexibility at the cost of making `sayHello.cpp` harder to understand.  This is just a toy example - in the real world this specific example is probably not worth the obfuscation; I would just repeat the `int main` stuff and have a header file with my `saySomething` function.  However, this is a stepping stone to understanding some much more complicated examples.
 
 The bottom line is that code reuse is A Good Thing and a principle motivator of code modularity, but that modularity necessarily makes code harder to understand from a top-down point of view.  We need to shift our thinking to a bottom-up approach; understand the building blocks of a program and you can often start to see how they fit together.  Better yet, you need not fully understand *all* of the building blocks in order to be able to make meaningful changes to *one* of them.
+
+[back to main](/)

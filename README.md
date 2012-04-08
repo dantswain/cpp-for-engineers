@@ -21,3 +21,7 @@ This is also a bit of an experiment in that I'm writing it as a [github](http://
 **Note** 
 
 For the most part, I'm going to write this assuming that you're using some variety of Linux or a Mac.  I'll try to be platform agnostic, but especially early on when I'm talking about compiling things, I'll be giving instructions on how to compile using g++.  That doesn't mean you can't use these instructions on windows: there are several routes available to compile c++ programs on windows.  Use google!
+
+## Contents
+
+- [Part 1](part1/)  About `int main` and code reuse
