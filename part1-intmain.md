@@ -13,7 +13,7 @@ int main(int argc, char** argv)
 }
 ```
 
-You can find the `helloworld.cpp` file in this directory.  Compile and run it from the command line like this:
+You can find the [`helloworld.cpp`](helloworld.cpp) file in this directory.  Compile and run it from the command line like this:
 
     g++ helloworld.cpp -o helloworld
     ./helloworld
