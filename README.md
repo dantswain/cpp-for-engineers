@@ -24,4 +24,4 @@ For the most part, I'm going to write this assuming that you're using some varie
 
 ## Contents
 
-- [Part 1](part1/)  About `int main` and code reuse
+- [Part 1](cpp-for-engineers/part1/)  About `int main` and code reuse
