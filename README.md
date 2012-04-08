@@ -1,4 +1,4 @@
-# C++ Tutorial for Engineers
+# A C++ Tutorial for Engineers
 
 ## About
 
@@ -6,6 +6,8 @@ This tutorial is a work in progress and is a bit of an experiment.  It may help 
 
 I am a programmer by experience.  By that I mean that I have no formal training in computer science.  On the other hand, I love coding and have been doing it for a long time; I've worked on enough projects and on projects of sufficient complexity that I've had to learn a lot of these ideas out of necessity.
 
-My background is engineering.  Specifically, mechanical engineering by way of electrical engineering, and in the end basically just a lot of applied mathematics.  If you care to know, my graduate research was in the area of cooperative robotics.
+I am an engineer by training.  I know lots of applied math, and I took the same introductory computer science course that all of the other engineering undergrads had to take.  I've tought undergrad courses in both electrical and mechanical engineering, mentored several undergrad students, and worked with lots of fellow grad students.  I have a decent idea what an engineer might already know about programming, how they approach coding problems, and what they're capable of learning.
 
-Like every undergraduate engineer, I had to take an introduction computer science course.  Mine was in Matlab and C++, but I think Java is also popular.  Either way, the emphasis of that course was on the very basic ideas of writing computer programs: variables, flow structures, etc.  The idea was to teach people just enough to be able to use programming to solve basic engineering problems, and to have some idea what *kinds* of problems can be solved by writing a computer program.  Object oriented programming may have been mentioned, but probably not until the last week of class and only a flavor.
+That's who I am, now why am I writing this?
+
+I wrote a lot of code in grad school to facilitate various experiments in my lab.  Now that I'm graduating and leaving, I'd really like that code to still be useful.  Somewhere along the line, I made a sort of transition from hacking together code just to solve a problem, to writing code that's (relatively) well-structured, reusable, and maintainable.  On the plus side, that code is applicable to lots of projects.  On the down side, it's pretty intimidating for someone whose largest coding projects have been a few hundred lines of Matlab code to try to work with a 30,000-line C++ project.
