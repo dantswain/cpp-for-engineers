@@ -1,13 +1,18 @@
 # A C++ Tutorial for Engineers
 
+by Dan Swain, dan.t.swain@gmail.com
+
 ## About
 
-This tutorial is a work in progress and is a bit of an experiment.  It may help to explain what this is all about if I describe who I am and my motivation in writing this.
+This tutorial is a work in progress and is a bit of an experiment. 
 
-I am a programmer by experience.  By that I mean that I have no formal training in computer science.  On the other hand, I love coding and have been doing it for a long time; I've worked on enough projects and on projects of sufficient complexity that I've had to learn a lot of these ideas out of necessity.
+This tutorial might be for you if
 
-I am an engineer by training.  I know lots of applied math, and I took the same introductory computer science course that all of the other engineering undergrads had to take.  I've tought undergrad courses in both electrical and mechanical engineering, mentored several undergrad students, and worked with lots of fellow grad students.  I have a decent idea what an engineer might already know about programming, how they approach coding problems, and what they're capable of learning.
+ - You're smart and have *some* programming experience in any language - you know how to use variables, if/then/else, for loops, etc.
+ - You don't have a lot of experience working with compiled languages like C and C++
+ - You want to understand ideas from object oriented programming and use them to tackle large and complex projects.
+ 
+I say this tutorial is for 'engineers' because, in my experience, they largely fit that description.  Except software engineers, but who's a software engineer that's searching for a C++ tutorial? :P  Anyways, I'm hoping that it's applicable to lots of people.
 
-That's who I am, now why am I writing this?
+This is also a bit of an experiment in that I'm writing it as a [github](http://github.com) repository.  I'm writing the text in markdown files (which GH automatically formats for display) and will try to attach actual pieces of code where I can.  That way, you can clone the repository and play along.
 
-I wrote a lot of code in grad school to facilitate various experiments in my lab.  Now that I'm graduating and leaving, I'd really like that code to still be useful.  Somewhere along the line, I made a sort of transition from hacking together code just to solve a problem, to writing code that's (relatively) well-structured, reusable, and maintainable.  On the plus side, that code is applicable to lots of projects.  On the down side, it's pretty intimidating for someone whose largest coding projects have been a few hundred lines of Matlab code to try to work with a 30,000-line C++ project.
