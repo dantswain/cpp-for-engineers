@@ -83,3 +83,6 @@ And a program like [`sayHello.cpp`](sayHello.cpp) that consists of two lines:
 SAY_PROG("Hello, world");
 ```
 
+We've used a [preprocessor macro](http://www.cplusplus.com/doc/tutorial/preprocessor/) to create an application template, `SAY_PROG` that does all of the common stuff for us.  Again, we've gained a lot of flexibility at the cost of making `sayHello.cpp` harder to understand.  This is just a toy example - in the real world this specific example is probably not worth the obfuscation; I would just repeat the `int main` stuff and have a header file with my `saySomething` function.  However, this is a stepping stone to understanding some much more complicated examples.
+
+The bottom line is that code reuse is A Good Thing and a principle motivator of code modularity, but that modularity necessarily makes code harder to understand from a top-down point of view.  We need to shift our thinking to a bottom-up approach; understand the building blocks of a program and you can often start to see how they fit together.  Better yet, you need not fully understand *all* of the building blocks in order to be able to make meaningful changes to *one* of them.
