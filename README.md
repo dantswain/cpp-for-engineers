@@ -4,7 +4,7 @@ by Dan Swain, dan.t.swain@gmail.com
 
 ## About
 
-This tutorial is a work in progress and is a bit of an experiment. 
+**Disclaimer** This tutorial is a work in progress and is a bit of an experiment.  Also, some of this is about what I believe to be good practices, and it's therefore possible that you may disagree.  It's also possible that I may say some things that are just plain *incorrect*.  If you catch me in the act, please do let me know!
 
 This tutorial might be for you if
 
@@ -24,4 +24,5 @@ For the most part, I'm going to write this assuming that you're using some varie
 
 ## Contents
 
+- [Part 0](https://github.com/dantswain/cpp-for-engineers/tree/master/part0)  Headers, pointers, and other basic ideas that you may not be familiar with
 - [Part 1](https://github.com/dantswain/cpp-for-engineers/tree/master/part1)  About `int main` and code reuse
